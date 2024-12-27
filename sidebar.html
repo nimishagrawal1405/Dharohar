@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            height: 100vh; /* Full height */
+            margin: 0;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-right: 1px solid #dee2e6;
+        }
+        .scrollable-menu {
+            overflow-y: auto; /* Enable vertical scrolling */
+            flex-grow: 1; /* Allow the menu to grow */
+            scrollbar-width: none; /* For Firefox */
+            -ms-overflow-style: none; /* For Internet Explorer and Edge */
+        }
+        .scrollable-menu::-webkit-scrollbar {
+            display: none; /* For Chrome, Safari, and Opera */
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar d-flex flex-column">
+    <!-- Top Section with Image and Texts -->
+    <div class="d-flex align-items-center mb-4">
+        <img src="your-image-url.jpg" alt="Sidebar Image" class="img-fluid" style="width: 80px; height: auto; border-radius: 5px;">
+        <div class="ml-3">
+            <h6 class="mb-0">Title Line 1</h6>
+            <h6 class="mb-0">Title Line 2</h6>
+            <h6 class="mb-0">Title Line 3</h6>
+        </div>
+    </div>
+
+    <!-- Scrollable List of Items -->
+    <div class="scrollable-menu">
+        <h5 class="mt-4">Menu</h5>
+        <ul class="list-unstyled">
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 1</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 2</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 3</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 4</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 5</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 6</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 7</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 8</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 9</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 10</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 11</a></li>
+            <li class="border-bottom py-2"><a href="#" class="text-dark">Item 12</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="content p-4">
+    <h1>Main Content Area</h1>
+    <p>This is where the main content of the page will go.</p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

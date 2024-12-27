@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height */
+            margin: 0;
+            background-image: url('your-background-image-url.jpg'); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+            transition: filter 0.3s ease; /* Smooth transition for blur effect */
+        }
+        .login-form {
+            width: 400px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative; /* Position relative for z-index */
+            z-index: 1; /* Ensure the form is above the blurred background */
+        }
+        .form-control:focus {
+            background-color: white; /* Change background to white on focus */
+            border-color: #007bff; /* Optional: Change border color on focus */
+        }
+        .btn-register {
+            background-color: #007bff;
+            color: white;
+        }
+        .btn-register:hover {
+            background-color: red; /* Hover effect */
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-form">
+    <h2 class="text-center">Register</h2>
+    <form>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Second Name</label>
+            <input type="text" class="form-control" id="lastName" placeholder="Enter your second name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="mobile">Mobile No</label>
+            <input type="tel" class="form-control" id="mobile" placeholder="Enter your mobile number" required>
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob" required>
+        </div>
+        <div class="form-group">
+            <label for="additionalInfo">Additional Information</label>
+            <textarea class="form-control" id="additionalInfo" rows="3" placeholder="Add any additional information here"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn btn-register btn-block">Register</button>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Function to add blur effect to the background
+    const inputs = document.querySelectorAll('.form-control');
+    const body = document.body;
+
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            body.style.filter = 'blur(5px)'; // Apply blur effect to the background
+        });
+
+        input.addEventListener('blur', () => {
+            body.style.filter = 'none'; // Remove blur effect when input loses focus
+        });
+    });
+</script>
+
+</body>
+</html>
