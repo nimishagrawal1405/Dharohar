@@ -1,77 +1,147 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <style type="text/css">
+    <style>
         body {
-    background-color: #f8f9fa;
-}
+            background-color: #f8f9fa;
+            background-image: linear-gradient(to bottom right, #e3f2fd, #ffebee);
+            font-family: 'Arial', sans-serif;
+            animation: fadeIn 1.5s ease-in;
+        }
 
-h1 {
-    margin-bottom: 30px;
-}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
 
-  
+        h1 {
+            margin-bottom: 30px;
+            color: #007bff;
+            text-shadow: 2px 2px 5px #ccc;
+            animation: slideInFromTop 1s ease-in-out;
+        }
 
-h4 {
-    margin-top: 20px;
-}
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
 
-.faq-section dt {
-    cursor: pointer;
-    margin-bottom: 10px;
-    background-color: #e9ecef;
-    padding: 10px;
-    border-radius: 5px;
-}
+        .faq-section dt {
+            cursor: pointer;
+            margin-bottom: 10px;
+            background-color: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
 
-#formResponse {
-    display: none;
-}
+        .faq-section dt:hover {
+            transform: scale(1.05);
+            background-color: #dee2e6;
+        }
+
+        .collapse {
+            animation: scaleUp 0.5s ease-in-out;
+        }
+
+        @keyframes scaleUp {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        button {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        #formResponse {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #d4edda;
+            color: #155724;
+            animation: slideInFromBottom 1s ease-in-out;
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
+
 <body>
+    <div class="container mt-5">
+        <h1 class="text-center">Contact Us</h1>
 
-<div class="container mt-5">
-    <h1 class="text-center">Contact Us</h1>
-    
-    <!-- Get in Touch Section -->
-    <div class="row">
-        <div class="col-md-6" style="padding-top:150px ;">
-            <h4>Get in Touch</h4>
-            <p>If you have any questions, feel free to reach out to us!</p>
-            <ul class="list-unstyled">
-                <li><strong>Email:</strong> support@example.com</li>
-                <li><strong>Phone:</strong> +1 234 567 890</li>
-                <li><strong>Address:</strong> 123 Main St, City, Country</li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <h4>Contact Form</h4>
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-            <div id="formResponse" class="mt-3"></div>
+        <!-- Get in Touch Section -->
+        <div class="row">
+            <div class="col-md-6" style="padding-top:150px;">
+                <h4>Get in Touch</h4>
+                <p>If you have any questions, feel free to reach out to us!</p>
+                <ul class="list-unstyled">
+                    <li><strong>Email:</strong> support@example.com</li>
+                    <li><strong>Phone:</strong> +1 234 567 890</li>
+                    <li><strong>Address:</strong> 123 Main St, City, Country</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h4>Contact Form</h4>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+                <div id="formResponse" class="mt-3"></div>
+            </div>
         </div>
 
-    </div>
- 
         <!-- FAQ Section -->
         <div class="faq-section mb-5 border p-4 rounded">
             <h4>Frequently Asked Questions</h4>
@@ -80,16 +150,15 @@ h4 {
                     What is your return policy?
                 </dt>
                 <dd class="col-sm-12 collapse" id="faq1">
-                    You can return any item within 30 days of purchase for a full refund.
+                    You can return your defective product between 7 days after the purchase. Our delivery partner will
+                    pick up the product at your convenience.
                 </dd>
-    
                 <dt class="col-sm-12" data-toggle="collapse" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
                     How can I track my order?
                 </dt>
                 <dd class="col-sm-12 collapse" id="faq2">
                     You can track your order using the tracking link sent to your email after shipment.
                 </dd>
-    
                 <dt class="col-sm-12" data-toggle="collapse" data-target="#faq3" aria-expanded="false" aria-controls="faq3">
                     Do you ship internationally?
                 </dt>
@@ -98,11 +167,28 @@ h4 {
                 </dd>
             </dl>
         </div>
-</div>
+    </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            const responseDiv = document.getElementById('formResponse');
+            responseDiv.style.display = 'block';
+            responseDiv.innerHTML = `
+                <strong>Thank you, ${name}!</strong><br>
+                Your message has been received. We will respond to <em>${email}</em> shortly!
+            `;
+
+            this.reset();
+        });
+    </script>
 </body>
+
 </html>
