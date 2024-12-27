@@ -7,11 +7,38 @@
     <title>Rental Sarees and Bridal Wear</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .img-fluid {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .img-fluid:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <header class="bg-primary text-white text-center py-4">
+    <header class="bg-primary text-white text-center py-4 fade-in">
         <h1>All About Rental Fashion</h1>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -26,7 +53,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#bridal-lehengas">Bridal Lehengas</a>
                     </li>
-                    
                 </ul>
             </div>
         </nav>
@@ -34,135 +60,308 @@
 
     <main class="container my-5">
 
-        <section id="sarees" class="mb-5">
+        <section id="sarees" class="mb-5 fade-in">
             <h2 class="text-center">Rental Sarees</h2>
             <p class="text-center">Explore our stunning collection of pre-pleated sarees available for rent. Perfect for
                 any occasion!</p>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/OIP (5).jpg" class="img-fluid" alt="Rental Saree 1">
+                    <div class="card">
+                        <img src="./Images/OIP (5).jpg" class="card-img-top img-fluid" alt="Rental Saree 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 1</h5>
+                            <p class="card-text">Price: ₹4000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/OIP (6).jpg" class="img-fluid" alt="Rental Saree 2">
+                    <div class="card">
+                        <img src="./Images/OIP (6).jpg" class="card-img-top img-fluid" alt="Rental Saree 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 2</h5>
+                            <p class="card-text">Price: ₹4500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/sage-green-kanjeevaram-saree.jpg" class="img-fluid" alt="Rental Saree 3">
+                    <div class="card">
+                        <img src="./Images/sage-green-kanjeevaram-saree.jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 3</h5>
+                            <p class="card-text">Price: ₹5000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/OIP (7).jpg" class="img-fluid" alt="Rental Saree 4">
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <img src="./Images/7daab90699da273ad4115a1251715c4b (1).jpg" class="img-fluid" alt="Rental Saree 6">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="./Images/01855926f497302df3ee6b8ccedfd496.jpg" class="img-fluid" alt="Rental Saree 1">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="./Images/021039853c3b45c9d3dd936071469731.jpg" class="img-fluid" alt="Rental Saree 2">
+                    <div class="card">
+                        <img src="./Images/OIP (7).jpg" class="card-img-top img-fluid" alt="Rental Saree 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 4</h5>
+                            <p class="card-text">Price: ₹5500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/0dc815ce45043973f1e1b6ae2cec10dd.jpg" class="img-fluid" alt="Rental Saree 3">
+                    <div class="card">
+                        <img src="./Images/7daab90699da273ad4115a1251715c4b (1).jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 5</h5>
+                            <p class="card-text">Price: ₹6000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/10-a56ee0ea-ec39-4057-8e81-c07f0a315808-500x500.webp" class="img-fluid"
-                        alt="Rental Saree 4">
+                    <div class="card">
+                        <img src="./Images/01855926f497302df3ee6b8ccedfd496.jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 6</h5>
+                            <p class="card-text">Price: ₹6500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/313f50e0a66f9be434d7caf0563b60c4.jpg" class="img-fluid" alt="Rental Saree 5">
+                    <div class="card">
+                        <img src="./Images/021039853c3b45c9d3dd936071469731.jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 7">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 7</h5>
+                            <p class="card-text">Price: ₹7000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/3C6A4414-scaled.jpg" class="img-fluid" alt="Rental Saree 6">
+                    <div class="card">
+                        <img src="./Images/0dc815ce45043973f1e1b6ae2cec10dd.jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 8">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 8</h5>
+                            <p class="card-text">Price: ₹7500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/450741_20-1.webp" class="img-fluid" alt="Rental Saree 5">
+                    <div class="card">
+                        <img src="./Images/10-a56ee0ea-ec39-4057-8e81-c07f0a315808-500x500.webp"
+                            class="card-img-top img-fluid" alt="Rental Saree 9">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 9</h5>
+                            <p class="card-text">Price: ₹8000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/4c143c299628f83449c552b568c169e2.jpg" class="img-fluid" alt="Rental Saree 6">
+                    <div class="card">
+                        <img src="./Images/313f50e0a66f9be434d7caf0563b60c4.jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 10">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 10</h5>
+                            <p class="card-text">Price: ₹8500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/5089742db447420dc59bf458495549e6.jpg" class="img-fluid" alt="Rental Saree 1">
+                    <div class="card">
+                        <img src="./Images/3C6A4414-scaled.jpg" class="card-img-top img-fluid" alt="Rental Saree 11">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 11</h5>
+                            <p class="card-text">Price: ₹9000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/5ec3b6689b73d9edc2d05a00103ffbd0 (1).jpg" class="img-fluid" alt="Rental Saree 2">
+                    <div class="card">
+                        <img src="./Images/450741_20-1.webp" class="card-img-top img-fluid" alt="Rental Saree 12">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 12</h5>
+                            <p class="card-text">Price: ₹9500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/embroidered-south-indian-saree.jpg" class="img-fluid" alt="Rental Saree 3">
+                    <div class="card">
+                        <img src="./Images/4c143c299628f83449c552b568c169e2.jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 13">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 13</h5>
+                            <p class="card-text">Price: ₹10000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/600_img-784424863643639c5767366.74763425.jpg" class="img-fluid"
-                        alt="Rental Saree 5">
+                    <div class="card">
+                        <img src="./Images/5089742db447420dc59bf458495549e6.jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 14">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 14</h5>
+                            <p class="card-text">Price: ₹10500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/6051a2c32083ad013571fde74ff6d341.jpg" class="img-fluid" alt="Rental Saree 6">
+                    <div class="card">
+                        <img src="./Images/5ec3b6689b73d9edc2d05a00103ffbd0 (1).jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 15">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 15</h5>
+                            <p class="card-text">Price: ₹11000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
-
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./Images/embroidered-south-indian-saree.jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 16">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 16</h5>
+                            <p class="card-text">Price: ₹11500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./Images/600_img-784424863643639c5767366.74763425.jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 17">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 17</h5>
+                            <p class="card-text">Price: ₹12000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="./Images/6051a2c32083ad013571fde74ff6d341.jpg" class="card-img-top img-fluid"
+                            alt="Rental Saree 18">
+                        <div class="card-body">
+                            <h5 class="card-title">Rental Saree 18</h5>
+                            <p class="card-text">Price: ₹12500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="bridal-lehengas" class="mb-5">
+        <section id="bridal-lehengas" class="mb-5 fade-in">
             <h2 class="text-center">Bridal Lehengas</h2>
             <p class="text-center">Make your wedding day special with our exquisite bridal lehengas available for rent.
             </p>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/7340a99671c5378fdda4d3d88d1d088d.jpg" class="img-fluid" alt="Bridal Lehenga 1">
+                    <div class="card">
+                        <img src="./Images/7340a99671c5378fdda4d3d88d1d088d.jpg" class="card-img-top img-fluid"
+                            alt="Bridal Lehenga 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Lehenga 1</h5>
+                            <p class="card-text">Price: ₹13000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/OIP (8).jpg" class="img-fluid" alt="Bridal Lehenga 2">
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <img src="./Images/OIP (10).jpg" class="img-fluid" alt="Bridal Lehenga 4">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="./Images/OIP (12).jpg" class="img-fluid" alt="Bridal Lehenga 5">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="./Images/OIP (11).jpg" class="img-fluid" alt="Bridal Lehenga 5">
+                    <div class="card">
+                        <img src="./Images/OIP (8).jpg" class="card-img-top img-fluid" alt="Bridal Lehenga 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Lehenga 2</h5>
+                            <p class="card-text">Price: ₹13500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/20b312c2dfca4f99b89f7bf9134db856.jpg" class="img-fluid" alt="Bridal Lehenga 1">
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <img src="./Images/60_43dc1811-f3b1-4a63-a844-85001a34cb58_600x600.webp" class="img-fluid"
-                        alt="Bridal Lehenga 3">
-                </div>
-
-                <div class="col-md-4 mb-4">
-                    <img src="./Images/460c42af5b036016009002d95dccc23f (1).jpg" class="img-fluid"
-                        alt="Bridal Lehenga 2">
-                </div>
-
-
-                <div class="col-md-4 mb-4">
-                    <img src="./Images/86570ad0ddf372bf222ce5f6ced1aa04.jpg" class="img-fluid" alt="Bridal Lehenga 5">
+                    <div class="card">
+                        <img src="./Images/OIP (10).jpg" class="card-img-top img-fluid" alt="Bridal Lehenga 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Lehenga 3</h5>
+                            <p class="card-text">Price: ₹14000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/318311702_1751596481900401_6053386600922429271_n.avif" class="img-fluid"
-                        alt="Bridal Lehenga 5">
+                    <div class="card">
+                        <img src="./Images/OIP (12).jpg" class="card-img-top img-fluid" alt="Bridal Lehenga 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Lehenga 4</h5>
+                            <p class="card-text">Price: ₹14500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/b84290206f359c9815e79ba36d7e0ed7.jpg" class="img-fluid" alt="Bridal Lehenga 1">
+                    <div class="card">
+                        <img src="./Images/OIP (11).jpg" class="card-img-top img-fluid" alt="Bridal Lehenga 5">
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Lehenga 5</h5>
+                            <p class="card-text">Price: ₹15000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/Bridal_Lehenga_9d5c0cfe-d7da-4429-a7fe-53c144b99c2d_600x600.webp"
-                        class="img-fluid" alt="Bridal Lehenga 2">
+                    <div class="card">
+                        <img src="./Images/20b312c2dfca4f99b89f7bf9134db856.jpg" class="card-img-top img-fluid"
+                            alt="Bridal Lehenga 6">
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Lehenga 6</h5>
+                            <p class="card-text">Price: ₹15500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/c5de1ddd35da20574ba1bc545cbcce4d.jpg" class="img-fluid" alt="Bridal Lehenga 3">
+                    <div class="card">
+                        <img src="./Images/60_43dc1811-f3b1-4a63-a844-85001a34cb58_600x600.webp"
+                            class="card-img-top img-fluid" alt="Bridal Lehenga 7">
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Lehenga 7</h5>
+                            <p class="card-text">Price: ₹16000</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/designer-lehenga-rosewood-maroon-designer-lehenga-silk-saree-online-32351343018177_1200x1200.webp"
-                        class="img-fluid" alt="Bridal Lehenga 4">
+                    <div class="card">
+                        <img src="./Images/460c42af5b036016009002d95dccc23f (1).jpg" class="card-img-top img-fluid"
+                            alt="Bridal Lehenga 8">
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Lehenga 8</h5>
+                            <p class="card-text">Price: ₹16500</p>
+                            <a href="#" class="btn btn-primary">View Details</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <img src="./Images/e0746bdaf1be147469e255c84d698a23.jpg" class="img-fluid" alt="Bridal Lehenga 5">
-                </div>
-                <div class="col-md-4 mb-4">
-                    <img src="./Images/Heavy-Red-Velvet-Lehenga-With-Horses-Embellished-819x1024.jpg" class="img-fluid"
-                        alt="Bridal Lehenga 5">
+                    <div class="card">
+                        <img src="./Images/86570ad0ddf372bf222ce5f6ced1aa04.jpg" class="card-img-top img-fluid"
+                            alt="Bridal Lehenga 9">
+                        <div class="card-body">
+                            <h5 class="card-title">Bridal Lehenga 9</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+    </main>
+</body>
+
+</html>
