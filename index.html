@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/dharo.jpg">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -15,27 +16,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
         .hamburger {
             cursor: pointer;
             width: 30px;
             height: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
             margin: 20px;
         }
-
-        .line {
-            height: 4px;
-            background-color: #343a40;
-            transition: all 0.3s ease;
+        a{
+            text-decoration: none;
         }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
         .category-bar {
             display: flex;
             justify-content: space-around;
@@ -57,7 +52,6 @@
             height: 60px;
             object-fit: cover;
             border-radius: 50%;
-
             margin-bottom: 8px;
         }
 
@@ -72,81 +66,145 @@
             transform: scale(1.1);
         }
 
-        body {
-            background-color: #f8f9fa;
-        }
-
         .card {
             transition: transform 0.2s;
+            background-color: white;
+            border-radius: 10px;
         }
 
         .card:hover {
             transform: scale(1.05);
         }
 
-        .card-img-top {
+        .i {
             max-width: 100%;
-        }
-
-        .card {
-            background-color: white;
-
         }
 
         .card-body h5 {
             color: purple;
         }
 
-        .card-body{
-            color: gold;
+        .card img{
+            height: 500px;
+        }
+        .card-body {
+            color: goldenrod;
+        }
+
+        .sidebar {
+            width: 250px;
+            /* Width of the sidebar */
+            background-color: #f4f4f4;
+            /* Background color */
+            padding: 20px;
+            position: fixed;
+            top: 0px;
+            /* Full height */
+            position: fixed;
+            /* Fixed position */
+            left: -250px;
+            /* Hide sidebar off-screen */
+            transition: left 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .sidebar.active {
+            left: 0;
+            /* Show sidebar */
+        }
+
+        .sidebar h2 {
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            /* Remove bullet points */
+            padding: 0;
+            /* Remove padding */
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+            /* Space between links */
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            /* Remove underline */
+            color: #333;
+            /* Link color */
+            display: block;
+            /* Make the link fill the entire list item */
+            padding: 10px;
+            /* Padding for links */
+            border-radius: 5px;
+            /* Rounded corners */
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #ddd;
+            /* Change background on hover */
         }
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-        <a href="cards.html">
-            <div class="container-fluid">
-                <div class="hamburger" onclick="toggleMenu()" style="padding-bottom: 1px;">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto">
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="">
-                        <h3 style="padding-top: 7px;">Home</h3>
-                        <span class="visually-hidden">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Rental1.html">
-                        <h3 style="padding-left: 15px; padding-top: 7px;">Rent</h3>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="">
-                        <h2
-                            style="padding-left: 310px;  padding-top: 7px; font-family: Yatra One, serif ; font-size: xx-large;">
-                            Dharohar</h2>
-                    </a>
-                </li>
-            </ul>
-            <form class="d-flex">
-                <ul class="nav-item">
-                    <img src="./images/dharo.jpg" style="height: 55px; padding-right: 0px; padding-top: 10px;">
+        <div class="container-fluid">
+            <div id="hamburger" style="padding-bottom: 1px;">
+                <span class="bi bi-list fs-3"></span>
+            </div>
+            <div class="sidebar" id="sidebar">
+                <h2>Dharohar</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="cards">Collections</a></li>
+                    <li><a href="Rental1.html">Rental Process</a></li>
+                    <li><a href="support.html">Contact Us</a></li>
                 </ul>
-                <ul class="nav-item">
-                    <a class="nav-link active" href="orders.html">
-                        <h4 style="padding-top: 10px;"><i class="bi bi-bag" style=" font-size: 30px;"> </i> Cart</h4>
-                </ul>
-            </form>
+            </div>
+            <script>
+                document.getElementById('hamburger').addEventListener('click', function () {
+                    const sidebar = document.getElementById('sidebar');
+                    sidebar.classList.toggle('active'); // Toggle the 'active' class
+                });
+            </script>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
 
-        </div>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <h3 style="padding-top: 7px;">Home</h3>
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Rental1.html">
+                            <h3 style="padding-left: 15px; padding-top: 7px;">Rent</h3>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="">
+                            <h2
+                                style="padding-left: 310px;  padding-top: 7px; font-family: Yatra One, serif ; font-size: xx-large;">
+                                Dharohar</h2>
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <ul class="nav-item">
+                        <img src="./images/dharo.jpg" style="height: 55px; padding-right: 0px; padding-top: 10px;">
+                    </ul>
+                    <ul class="nav-item">
+                        <a class="nav-link active" href="orders.html">
+                            <h4 style="padding-top: 10px;"><i class="bi bi-bag" style=" font-size: 30px;"> </i> Cart
+                            </h4>
+                    </ul>
+                </form>
+
+            </div>
         </div>
     </nav>
 
@@ -204,7 +262,7 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
 
-                    <img src="images/2_4f80a4aa-e37c-4673-8a99-468903105aab_360x.webp" class="card-img-top"
+                    <img src="images/2_4f80a4aa-e37c-4673-8a99-468903105aab_360x.webp" class="i"
                         alt="Product 1">
                     <div class="card-body">
                         <h5>Silk Saree</h5><br>
@@ -221,7 +279,7 @@
             <!-- Card 2 -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="images/photo_2024-12-27_22-35-02 (2).jpg" class="card-img-top" alt="Product 2">
+                    <img src="images/photo_2024-12-27_22-35-02 (2).jpg" class="i" alt="Product 2">
                     <div class="card-body">
                         <h5>Kanjeevaram Saree</h5><br>
                         <span class="bi bi-star-fill"></span>
@@ -233,11 +291,11 @@
                 </div>
             </div>
             <!-- Card 3 -->
-            <div class="col-md-4 mb-4" >
+            <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="images/photo_2024-12-27_22-35-03 (4).jpg" class="card-img-top" alt="Product 3">
-                    <div class="card-body" style="height: 215px";>
-                        <h5 >Paithani Saree</h5><br>
+                    <img src="images/photo_2024-12-27_22-35-03 (4).jpg" class="i" alt="Product 3">
+                    <div class="card-body">
+                        <h5>Paithani Saree</h5><br>
                         <span class="bi bi-star-fill"></span>
                         <span class="bi bi-star-fill"></span>
                         <span class="bi bi-star-fill"></span>
@@ -251,8 +309,8 @@
             <!-- Card 4 -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="images/photo_2024-12-27_22-35-03 (2).jpg" class="card-img-top" alt="Product 4">
-                    <div class="card-body" style="height: 185px";>
+                    <img src="images/photo_2024-12-27_22-35-03 (2).jpg" class="i" alt="Product 4">
+                    <div class="card-body">
                         <h5>Chanderi Saree</h5><br>
                         <span class="bi bi-star-fill"></span>
 
@@ -266,8 +324,8 @@
             <div class="col-md-4 mb-4">
                 <div class="card">
 
-                    <img src="images/photo_2024-12-27_22-35-03.jpg" class="card-img-top" alt="Product 5">
-                    <div class="card-body" style="height: 170px";>
+                    <img src="images/photo_2024-12-27_22-35-03.jpg" class="i" alt="Product 5">
+                    <div class="card-body">
                         <h5>Silk Saree</h5><br>
                         <span class="bi bi-star-fill"></span>
                         <span class="bi bi-star-fill"></span>
@@ -281,7 +339,7 @@
             <!-- Card 6 -->
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <img src="images/2_4f80a4aa-e37c-4673-8a99-468903105aab_360x.webp" class="card-img-top"
+                    <img src="images/2_4f80a4aa-e37c-4673-8a99-468903105aab_360x.webp" class="i"
                         alt="Product 6">
                     <div class=" card-body">
                         <h5>Patola Saree</h5><br>
@@ -295,8 +353,8 @@
                 </div>
             </div>
         </div>
-        <div>
-            <iframe width="1170" height="440" style="margin-top: 18px; border-radius: 20px;" 
+        <div class="mx-auto">
+            <iframe width="90%" height="400" style="margin: 18px 0 0 0; border-radius: 20px;"
                 src="https://www.youtube.com/embed/QoGOW_Lh5-4?si=_lCeIK3V8fyBAbEe" title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -312,10 +370,10 @@
                     <div class="card">
 
                         <div class="image1">
-                            <img src="./images/01855926f497302df3ee6b8ccedfd496.jpg" class="card-img-top"
+                            <img src="./images/01855926f497302df3ee6b8ccedfd496.jpg" class="i"
                                 alt="Product 1">
                         </div>
-                        <div class="card-body"  style="height: 260px";>
+                        <div class="card-body">
                             <h5>Kanjeevaram Saree</h5><br>
                             <span class="bi bi-star-fill"></span>
                             <span class="bi bi-star-fill"></span>
@@ -330,7 +388,7 @@
                 <!-- Card 2 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="./images/021039853c3b45c9d3dd936071469731.jpg" class="card-img-top" alt="Product 2">
+                        <img src="./images/021039853c3b45c9d3dd936071469731.jpg" class="i" alt="Product 2">
                         <div class="card-body">
                             <h5>Satin Saree</h5><br>
                             <span class="bi bi-star-fill"></span>
@@ -345,8 +403,8 @@
                 <!-- Card 3 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="./images/0dc815ce45043973f1e1b6ae2cec10dd.jpg" class="card-img-top" alt="Product 3">
-                        <div class="card-body"  style="height: 215px";>
+                        <img src="./images/0dc815ce45043973f1e1b6ae2cec10dd.jpg" class="i" alt="Product 3">
+                        <div class="card-body">
                             <h5>Chiffon Saree</h5><br>
                             <span class="bi bi-star-fill"></span>
                             <span class="bi bi-star-fill"></span>
@@ -360,7 +418,7 @@
                 <!-- Card 4 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="./images/10-a56ee0ea-ec39-4057-8e81-c07f0a315808-500x500.webp" class="card-img-top"
+                        <img src="./images/10-a56ee0ea-ec39-4057-8e81-c07f0a315808-500x500.webp" class="i"
                             alt="Product 4">
                         <div class="card-body">
                             <h5>Mysore silk Saree</h5><br>
@@ -378,8 +436,8 @@
                 <div class="col-md-4 mb-4">
                     <div class="card">
 
-                        <img src="./images/20b312c2dfca4f99b89f7bf9134db856.jpg" class="card-img-top" alt="Product 5">
-                        <div class="card-body" style="height: 225px";>
+                        <img src="./images/20b312c2dfca4f99b89f7bf9134db856.jpg" class="i" alt="Product 5">
+                        <div class="card-body">
                             <h5>Bandhani Saree</h5><br>
                             <span class="bi bi-star-fill"></span>
                             <span class="bi bi-star-fill"></span>
@@ -392,9 +450,9 @@
                 <!-- Card 6 -->
                 <div class="col-md-4 mb-4">
                     <div class="card">
-                        <img src="./images/2_4f80a4aa-e37c-4673-8a99-468903105aab_360x.webp" class="card-img-top"
+                        <img src="./images/2_4f80a4aa-e37c-4673-8a99-468903105aab_360x.webp" class="i"
                             alt="Product 6">
-                        <div class=" card-body" style="height: 180px";>
+                        <div class=" card-body">
                             <h5>Kasavu Saree</h5><br>
                             <span class="bi bi-star-fill"></span>
                             <span class="bi bi-star-fill"></span>
@@ -415,9 +473,9 @@
                     <div class="col-md-4 mb-4">
                         <div class="card">
 
-                            <img src="./images/313f50e0a66f9be434d7caf0563b60c4.jpg" class="card-img-top"
+                            <img src="./images/313f50e0a66f9be434d7caf0563b60c4.jpg" class="i"
                                 alt="Product 1">
-                            <div class="card-body" style="height: 200px";>
+                            <div class="card-body">
                                 <h5>Chiffon Saree</h5><br>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
@@ -432,8 +490,8 @@
                     <div class="col-md-4 mb-4">
                         <div class="card">
                             <img src="./images/318311702_1751596481900401_6053386600922429271_n.avif"
-                                class="card-img-top" alt="Product 2">
-                            <div class="card-body" style="height: 310px";>
+                                class="i" alt="Product 2">
+                            <div class="card-body">
                                 <h5>Tussar silk Saree</h5><br>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
@@ -447,8 +505,8 @@
                     </div>
                     <!-- Card 3 -->
                     <div class="col-md-4 mb-4">
-                        <div class="card" style="height: 735px";>
-                            <img src="./images/3C6A4414-scaled.jpg" class="card-img-top" alt="Product 3">
+                        <div class="card" >
+                            <img src="./images/3C6A4414-scaled.jpg" class="i" alt="Product 3">
                             <div class="card-body">
                                 <h5>Crepe Saree</h5><br>
                                 <span class="bi bi-star-fill"></span>
@@ -462,8 +520,8 @@
                     <!-- Card 4 -->
                     <div class="col-md-4 mb-4">
                         <div class="card">
-                            <img src="./images/450741_20-1.webp" class="card-img-top" alt="Product 4">
-                            <div class="card-body" style="height: 225px";>
+                            <img src="./images/450741_20-1.webp" class="i" alt="Product 4">
+                            <div class="card-body">
                                 <h5>Linen Saree</h5><br>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
@@ -478,9 +536,9 @@
                     <div class="col-md-4 mb-4">
                         <div class="card">
 
-                            <img src="./images/4c143c299628f83449c552b568c169e2.jpg" class="card-img-top"
+                            <img src="./images/4c143c299628f83449c552b568c169e2.jpg" class="i"
                                 alt="Product 5">
-                            <div class="card-body" style="height: 225px";>
+                            <div class="card-body">
                                 <h5>Silk Saree</h5><br>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
@@ -493,8 +551,8 @@
                     </div>
                     <!-- Card 6 -->
                     <div class="col-md-4 mb-4">
-                        <div class="card" style="height: 735px";>
-                            <img src="./images/5089742db447420dc59bf458495549e6.jpg" class="card-img-top"
+                        <div class="card">
+                            <img src="./images/5089742db447420dc59bf458495549e6.jpg" class="i"
                                 alt="Product 6">
                             <div class=" card-body">
                                 <h5>Chanderi Saree</h5><br>
@@ -560,15 +618,6 @@
             </div>
         </div>
     </footer>
-
-
-
-    <script>
-        function toggleMenu() {
-            // You can add functionality here to toggle the sidebar or menu
-            alert("Menu toggled!"); // Placeholder for demonstration
-        }
-    </script>
 </body>
 
 </html>
