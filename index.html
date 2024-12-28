@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
         integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
 
-        <link rel="stylesheet" href="bootstrap.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
-        <style>
-          
-          .hamburger {
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <style>
+        .hamburger {
             cursor: pointer;
             width: 30px;
             height: 20px;
@@ -24,6 +24,7 @@
             justify-content: space-between;
             margin: 20px;
         }
+
         .line {
             height: 4px;
             background-color: #343a40;
@@ -31,46 +32,47 @@
         }
 
         body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-.category-bar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f8f9fa;
-    padding: 15px 10px;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-}
+        .category-bar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #f8f9fa;
+            padding: 15px 10px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
 
-.category {
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
+        .category {
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
 
-.category img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 50%;
-    
-    margin-bottom: 8px;
-}
+        .category img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 50%;
 
-.category p {
-    margin: 0;
-    font-size: 14px;
-    color: #333;
-    font-weight: bold;
-}
+            margin-bottom: 8px;
+        }
 
-.category:hover {
-    transform: scale(1.1);
-}
-body {
+        .category p {
+            margin: 0;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .category:hover {
+            transform: scale(1.1);
+        }
+
+        body {
             background-color: #f8f9fa;
         }
 
@@ -85,98 +87,117 @@ body {
         .card-img-top {
             max-width: 100%;
         }
-        </style>
-      </head>
+
+        .card {
+            background-color: white;
+
+        }
+
+        .card-body h5 {
+            color: purple;
+        }
+
+        .card-body{
+            color: gold;
+        }
+    </style>
+</head>
 
 <body>
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-      <a href="cards.html">
-        <div class="container-fluid">
-          <div class="hamburger" onclick="toggleMenu()" style="padding-bottom: 1px;">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div></a>
-          <div class="collapse navbar-collapse" id="navbarColor01">
+        <a href="cards.html">
+            <div class="container-fluid">
+                <div class="hamburger" onclick="toggleMenu()" style="padding-bottom: 1px;">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav me-auto">
-              
-              <li class="nav-item">
-                <a class="nav-link active" href=""><h3 style="padding-top: 7px;">Home</h3>
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Rental1.html"><h3 style="padding-left: 15px; padding-top: 7px;">Rent</h3></a>
-              </li>
-            
-              <li class="nav-item">
-                <a class="nav-link" href=""><h2 style="padding-left: 310px;  padding-top: 7px; font-family: Yatra One, serif ; font-size: xx-large;">Dharohar</h2></a>
-              </li>
 
-            
+                <li class="nav-item">
+                    <a class="nav-link active" href="">
+                        <h3 style="padding-top: 7px;">Home</h3>
+                        <span class="visually-hidden">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Rental1.html">
+                        <h3 style="padding-left: 15px; padding-top: 7px;">Rent</h3>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="">
+                        <h2
+                            style="padding-left: 310px;  padding-top: 7px; font-family: Yatra One, serif ; font-size: xx-large;">
+                            Dharohar</h2>
+                    </a>
+                </li>
             </ul>
             <form class="d-flex">
-              <ul class="nav-item">
-                <img src="./images/dharo.jpg" style="height: 55px; padding-right: 0px; padding-top: 10px;">
-              </ul> 
-              <ul class="nav-item">
-                <a class="nav-link active" href="orders.html"><h4 style="padding-top: 10px;"><i class="bi bi-bag" style=" font-size: 30px;"> </i> Cart</h4>
-              </ul> 
+                <ul class="nav-item">
+                    <img src="./images/dharo.jpg" style="height: 55px; padding-right: 0px; padding-top: 10px;">
+                </ul>
+                <ul class="nav-item">
+                    <a class="nav-link active" href="orders.html">
+                        <h4 style="padding-top: 10px;"><i class="bi bi-bag" style=" font-size: 30px;"> </i> Cart</h4>
+                </ul>
             </form>
 
-          </div>
         </div>
-      </nav>
+        </div>
+    </nav>
 
-      <section class="category-bar">
+    <section class="category-bar">
         <div class="category">
-          <a href="cards.html">
-            <img src="./Images/OIP (5).jpg" alt="Silk Sarees"></a>
+            <a href="cards.html">
+                <img src="./Images/OIP (5).jpg" alt="Silk Sarees"></a>
             <p>Silk Sarees</p>
         </div>
         <div class="category">
-          <a href="cards.html">
-            <img src="./Images/OIP (23).jpg" alt="Cotton Sarees">
-        </a>
+            <a href="cards.html">
+                <img src="./Images/OIP (23).jpg" alt="Cotton Sarees">
+            </a>
             <p>Cotton Sarees</p>
         </div>
         <div class="category">
-          <a href="cards.html">
-            <img src="./Images/embroidered-south-indian-saree.jpg" alt="Designer Sarees"></a>
+            <a href="cards.html">
+                <img src="./Images/embroidered-south-indian-saree.jpg" alt="Designer Sarees"></a>
             <p>Designer Sarees</p>
         </div>
         <div class="category">
-          <a href="cards.html">
-            <img src="./Images/kanjivaram-wedding-sarees-11.jpg" alt="Wedding Sarees">
-            <p>Wedding Sarees</p></a>
+            <a href="cards.html">
+                <img src="./Images/kanjivaram-wedding-sarees-11.jpg" alt="Wedding Sarees">
+                <p>Wedding Sarees</p>
+            </a>
         </div>
         <div class="category">
-          <a href="Rental1.html">
-            <img src="./Images/15777112505308.jpg" alt="Partywear Sarees"></a>
+            <a href="Rental1.html">
+                <img src="./Images/15777112505308.jpg" alt="Partywear Sarees"></a>
             <p>Partywear</p>
         </div>
 
         <div class="category">
-          <a href="Rental1.html">
-            <img src="./Images/7daab90699da273ad4115a1251715c4b.jpg" alt="Designer Sarees"></a>
+            <a href="Rental1.html">
+                <img src="./Images/7daab90699da273ad4115a1251715c4b.jpg" alt="Designer Sarees"></a>
             <p>Chanderi Sarees</p>
         </div>
         <div class="category">
-          <a href="Rental1.html">
-            <img src="./Images/banarasi-sarees1.jpg" alt="Wedding Sarees"></a>
+            <a href="Rental1.html">
+                <img src="./Images/banarasi-sarees1.jpg" alt="Wedding Sarees"></a>
             <p>Banarsi Sarees</p>
         </div>
         <div class="category">
-          <a href="Rental1.html">
-            <img src="./Images/65d3224bf64b58b84744bc4efc2f22a6.jpg" alt="Partywear Sarees"></a>
+            <a href="Rental1.html">
+                <img src="./Images/65d3224bf64b58b84744bc4efc2f22a6.jpg" alt="Partywear Sarees"></a>
             <p>Chiffon Sarees</p>
         </div>
     </section>
-       <div> 
-        <iframe width="1520" height="440" style="margin-top: 18px; border-radius: 20px;" src="https://www.youtube.com/embed/QoGOW_Lh5-4?si=_lCeIK3V8fyBAbEe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"  allowfullscreen></iframe>
-       </div>
-         
-       <div class="container mt-5">
+
+
+    <div class="container mt-5">
         <h2 class="text-center mb-4">Our Products</h2>
         <div class="row">
             <!-- Card 1 -->
@@ -207,17 +228,16 @@ body {
                         <span class="bi bi-star-fill"></span>
 
                         <span class="bi bi-star-fill"></span><br><br>
-
                         <a href="viewdetails2.html" class="btn btn-primary">View Details</a>
                     </div>
                 </div>
             </div>
             <!-- Card 3 -->
-            <div class="col-md-4 mb-4">
+            <div class="col-md-4 mb-4" >
                 <div class="card">
                     <img src="images/photo_2024-12-27_22-35-03 (4).jpg" class="card-img-top" alt="Product 3">
-                    <div class="card-body">
-                        <h5>Paithani Saree</h5><br>
+                    <div class="card-body" style="height: 215px";>
+                        <h5 >Paithani Saree</h5><br>
                         <span class="bi bi-star-fill"></span>
                         <span class="bi bi-star-fill"></span>
                         <span class="bi bi-star-fill"></span>
@@ -232,7 +252,7 @@ body {
             <div class="col-md-4 mb-4">
                 <div class="card">
                     <img src="images/photo_2024-12-27_22-35-03 (2).jpg" class="card-img-top" alt="Product 4">
-                    <div class="card-body">
+                    <div class="card-body" style="height: 185px";>
                         <h5>Chanderi Saree</h5><br>
                         <span class="bi bi-star-fill"></span>
 
@@ -247,7 +267,7 @@ body {
                 <div class="card">
 
                     <img src="images/photo_2024-12-27_22-35-03.jpg" class="card-img-top" alt="Product 5">
-                    <div class="card-body">
+                    <div class="card-body" style="height: 170px";>
                         <h5>Silk Saree</h5><br>
                         <span class="bi bi-star-fill"></span>
                         <span class="bi bi-star-fill"></span>
@@ -275,6 +295,13 @@ body {
                 </div>
             </div>
         </div>
+        <div>
+            <iframe width="1170" height="440" style="margin-top: 18px; border-radius: 20px;" 
+                src="https://www.youtube.com/embed/QoGOW_Lh5-4?si=_lCeIK3V8fyBAbEe" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
 
 
         <div class="container mt-5">
@@ -285,11 +312,10 @@ body {
                     <div class="card">
 
                         <div class="image1">
-
                             <img src="./Images/01855926f497302df3ee6b8ccedfd496.jpg" class="card-img-top"
                                 alt="Product 1">
                         </div>
-                        <div class="card-body">
+                        <div class="card-body"  style="height: 260px";>
                             <h5>Kanjeevaram Saree</h5><br>
                             <span class="bi bi-star-fill"></span>
                             <span class="bi bi-star-fill"></span>
@@ -320,7 +346,7 @@ body {
                 <div class="col-md-4 mb-4">
                     <div class="card">
                         <img src="./Images/0dc815ce45043973f1e1b6ae2cec10dd.jpg" class="card-img-top" alt="Product 3">
-                        <div class="card-body">
+                        <div class="card-body"  style="height: 215px";>
                             <h5>Chiffon Saree</h5><br>
                             <span class="bi bi-star-fill"></span>
                             <span class="bi bi-star-fill"></span>
@@ -353,13 +379,12 @@ body {
                     <div class="card">
 
                         <img src="./Images/20b312c2dfca4f99b89f7bf9134db856.jpg" class="card-img-top" alt="Product 5">
-                        <div class="card-body">
+                        <div class="card-body" style="height: 225px";>
                             <h5>Bandhani Saree</h5><br>
                             <span class="bi bi-star-fill"></span>
                             <span class="bi bi-star-fill"></span>
                             <span class="bi bi-star-fill"></span>
                             <span class="bi bi-star-fill"></span><br><br>
-
                             <a href="viewdetails11.html" class="btn btn-primary">View Details</a>
                         </div>
                     </div>
@@ -369,7 +394,7 @@ body {
                     <div class="card">
                         <img src="./Images/2_4f80a4aa-e37c-4673-8a99-468903105aab_360x.webp" class="card-img-top"
                             alt="Product 6">
-                        <div class=" card-body">
+                        <div class=" card-body" style="height: 180px";>
                             <h5>Kasavu Saree</h5><br>
                             <span class="bi bi-star-fill"></span>
                             <span class="bi bi-star-fill"></span>
@@ -392,7 +417,7 @@ body {
 
                             <img src="./Images/313f50e0a66f9be434d7caf0563b60c4.jpg" class="card-img-top"
                                 alt="Product 1">
-                            <div class="card-body">
+                            <div class="card-body" style="height: 200px";>
                                 <h5>Chiffon Saree</h5><br>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
@@ -408,7 +433,7 @@ body {
                         <div class="card">
                             <img src="./Images/318311702_1751596481900401_6053386600922429271_n.avif"
                                 class="card-img-top" alt="Product 2">
-                            <div class="card-body">
+                            <div class="card-body" style="height: 310px";>
                                 <h5>Tussar silk Saree</h5><br>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
@@ -422,7 +447,7 @@ body {
                     </div>
                     <!-- Card 3 -->
                     <div class="col-md-4 mb-4">
-                        <div class="card">
+                        <div class="card" style="height: 735px";>
                             <img src="./Images/3C6A4414-scaled.jpg" class="card-img-top" alt="Product 3">
                             <div class="card-body">
                                 <h5>Crepe Saree</h5><br>
@@ -430,7 +455,6 @@ body {
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span><br><br>
-
                                 <a href="vd15.html" class="btn btn-primary">View Details</a>
                             </div>
                         </div>
@@ -439,7 +463,7 @@ body {
                     <div class="col-md-4 mb-4">
                         <div class="card">
                             <img src="./Images/450741_20-1.webp" class="card-img-top" alt="Product 4">
-                            <div class="card-body">
+                            <div class="card-body" style="height: 225px";>
                                 <h5>Linen Saree</h5><br>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
@@ -456,7 +480,7 @@ body {
 
                             <img src="./Images/4c143c299628f83449c552b568c169e2.jpg" class="card-img-top"
                                 alt="Product 5">
-                            <div class="card-body">
+                            <div class="card-body" style="height: 225px";>
                                 <h5>Silk Saree</h5><br>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
@@ -469,7 +493,7 @@ body {
                     </div>
                     <!-- Card 6 -->
                     <div class="col-md-4 mb-4">
-                        <div class="card">
+                        <div class="card" style="height: 735px";>
                             <img src="./Images/5089742db447420dc59bf458495549e6.jpg" class="card-img-top"
                                 alt="Product 6">
                             <div class=" card-body">
@@ -479,127 +503,72 @@ body {
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span>
                                 <span class="bi bi-star-fill"></span><br><br>
-
                                 <a href="vd18.html" class="btn btn-primary">View Details</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="container mt-5">
-
-                    <div class="row">
-                        <!-- Card 1 -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-
-                                <img src="./Images/kanjivaram-wedding-sarees-11.jpg" class="card-img-top"
-                                    alt="Product 1">
-                                <div class="card-body">
-                                    <h5>Kanjeevaram Saree</h5><br>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span><br><br>
-
-                                    <a href="vd19.html" class="btn btn-primary">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 2 -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="./Images/embroidered-south-indian-saree.jpg" class="card-img-top"
-                                    alt="Product 2">
-                                <div class="card-body">
-                                    <h5>Georgette Saree</h5><br>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-
-                                    <span class="bi bi-star-fill"></span><br><br>
-
-                                    <a href="vd20.html" class="btn btn-primary">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="./Images/600_img-784424863643639c5767366.74763425.jpg" class="card-img-top"
-                                    alt="Product 3">
-                                <div class="card-body">
-                                    <h5>Mysore silk Saree</h5><br>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span><br><br>
-
-                                    <a href="view det.21.html" class="btn btn-primary">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 4 -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="./Images/6051a2c32083ad013571fde74ff6d341.jpg" class="card-img-top"
-                                    alt="Product 4">
-                                <div class="card-body">
-                                    <h5>Patola Saree</h5><br>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span><br><br>
-
-                                    <a href="view.details22.html" class="btn btn-primary">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 5 -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-
-                                <img src="./Images/7340a99671c5378fdda4d3d88d1d088d.jpg" class="card-img-top"
-                                    alt="Product 5">
-                                <div class="card-body">
-                                    <h5>Banarsi Saree</h5><br>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span><br><br>
-
-                                    <a href="view.details23.html" class="btn btn-primary">View Details</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 6 -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="./Images/7daab90699da273ad4115a1251715c4b (1).jpg" class="card-img-top"
-                                    alt="Product 6">
-                                <div class=" card-body">
-                                    <h5>Paithani Saree</h5><br>
-                                    <span class="bi bi-star-fill"></span>
-                                    <span class="bi bi-star-fill"></span>
-
-                                    <span class="bi bi-star-fill"></span><br><br>
-
-                                    <a href="view.details24.html" class="btn btn-primary">View Details</a>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
+    <footer class="text-white pt-4 pb-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Dharohar Saree is dedicated to showcasing the rich heritage of traditional sarees from India.
+                        Explore our exquisite collection of Banarasi, Kanjeevaram, Chindari, and more.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Our Sarees</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Banarasi Sarees</a></li>
+                        <li><a href="#" class="text-white">Kanjeevaram Sarees</a></li>
+                        <li><a href="#" class="text-white">Chindari Sarees</a></li>
+                        <li><a href="#" class="text-white">Leheriya Sarees</a></li>
+                        <li><a href="#" class="text-white">Bandhani Sarees</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect with Us</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.facebook.com" class="text-white" target="_blank">
+                                <i class="bi bi-facebook"></i> Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com" class="text-white" target="_blank">
+                                <i class="bi bi-instagram"></i> Instagram
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.twitter.com" class="text-white" target="_blank">
+                                <i class="bi bi-twitter"></i> Twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:info@dharoharsaree.com" class="text-white">
+                                <i class="bi bi-envelope"></i> Email Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>&copy; 2023 Dharohar Saree. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
 
-      <script>
+
+
+    <script>
         function toggleMenu() {
             // You can add functionality here to toggle the sidebar or menu
             alert("Menu toggled!"); // Placeholder for demonstration
         }
     </script>
 </body>
+
 </html>
